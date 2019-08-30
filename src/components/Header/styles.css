@@ -1,0 +1,50 @@
+h2 {
+  /* margin-top: 0; */
+  line-height: 1.6em;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header__brand {
+  flex: 0 0 100%;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 5vw;
+}
+
+.header__brand:hover {
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💌</text></svg>") 16 0,auto;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    -webkit-transform: translateX(-200%);
+  }
+}
+
+@keyframes slideshow {
+  0%    { left: 0; }
+  100%  { left: -200%; }
+}
+
+.header__link {
+  color: inherit;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__link--active {
+  text-decoration: underline;
+}

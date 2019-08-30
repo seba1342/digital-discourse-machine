@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  /* font-family: 'Beth Ellen', cursive; */
+  font-size: 1.6em;
+}
+
+.subtitle {
+  margin-top: 0;
+  opacity: 0.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  margin: 0;
+}
+
+.container__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.loveletter__item {
+  flex: 0 0 30%;
+  margin: 8px;
+}
+
+.loveletter__link {
+  color: inherit;
+  text-decoration: none;
+  position:relative;
+  display:inline-block;
+  cursor: pointer;
+}
+
+.loveletter__link:hover {
+  text-decoration: underline;
+}
+
+.loveletter__title {
+  font-size: 1.4em;
+  margin-top: 8px;
+}
+
+.loveletter__image {
+  height: 150px;
+  width: 400px;
+  align-self: flex-start;
+  justify-self: center;
+  -webkit-filter: grayscale(100%);
+  z-index: 10;
+
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  overflow: hidden;
+}
+
+.loveletter__image--overlay {
+  display: none;
+}
+
+.loveletter__image--overlay:before, .loveletter__image--overlay:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 20px;
+}
+
+.loveletter__link:hover .loveletter__image--overlay {
+  width: 100%;
+  height: 100%;
+  background: #0B93F6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.loveletter__image--overlay:before {
+  right: -7px;
+  border-right: 20px solid #0B93F6;
+  border-bottom-left-radius: 16px 14px;
+  -webkit-transform: translate(0, -2px);
+  transform: translate(0, -2px);
+}
+
+.loveletter__image--overlay:after {
+  right: -56px;
+  width: 26px;
+  background: white;
+  border-bottom-left-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+  transform: translate(-30px, -2px);
+}
+
+.loveletter__link:hover .loveletter__image {
+  filter: invert(100%);
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.filter__item {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter__item--active {
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+
+.filter__item:hover {
+  background-color: #EEEEEE;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: line-through;
+}
+
+p {
+  max-width: 600px;
+  line-height: 1.6em;
+  margin-top: 48px;
+}
+
+.essay__quote {
+  color: gray;
+}
+
+.essay__quote::before, .essay__quote::after {
+  content: '"';
+}
+
+.essay__title {
+  line-height: 1em;
+  text-align: center;
+}
+
+.essay__author {
+  color: #666666;
+  line-height: 1em;
+  margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: 1em;
+  }
+  .loveletter__item {
+    flex: 0 0 45%;
+  }
+  .loveletter__image {
+    height: 200px;
+    width: 533px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 0.8em;
+  }
+  .loveletter__item {
+    flex: 0 0 40%;
+  }
+  .loveletter__image {
+    height: 150px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .loveletter__image {
+    height: 100px;
+    width: 266px;
+  }
+}
